@@ -10,10 +10,12 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var list_pokemon_component_1 = require("./list-pokemon/list-pokemon.component");
 var detail_pokemon_component_1 = require("./detail-pokemon/detail-pokemon.component");
+var edit_pokemon_component_1 = require("./form-pokemon/edit-pokemon.component");
 // routes
 var appRoutes = [
     { path: 'pokemons', component: list_pokemon_component_1.ListPokemonComponent },
     { path: 'pokemon/:id', component: detail_pokemon_component_1.DetailPokemonComponent },
+    { path: 'pokemon/edit/:id', component: edit_pokemon_component_1.EditPokemonComponent },
     { path: '', redirectTo: 'pokemons', pathMatch: 'full' }
 ];
 var AppRoutingModule = /** @class */ (function () {
