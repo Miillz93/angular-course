@@ -7,34 +7,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_routing_module_1 = require("./app-routing.module");
-var app_component_1 = require("./app.component");
+var common_1 = require("@angular/common");
 var list_pokemon_component_1 = require("./list-pokemon/list-pokemon.component");
 var detail_pokemon_component_1 = require("./detail-pokemon/detail-pokemon.component");
-var page_not_found_component_1 = require("./page-not-found/page-not-found.component");
 var border_card_directive_1 = require("./border-card.directive");
 var pokemon_type_color_pipe_1 = require("./pokemon-type-color.pipe");
-var AppModule = /** @class */ (function () {
-    function AppModule() {
+var PokemonsModule = /** @class */ (function () {
+    function PokemonsModule() {
     }
-    AppModule = __decorate([
+    PokemonsModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule,
-                // PokemonsModule,
-                app_routing_module_1.AppRoutingModule
+                common_1.CommonModule
             ],
-            declarations: [app_component_1.AppComponent,
-                border_card_directive_1.BorderCardDirective,
-                page_not_found_component_1.PageNotFoundComponent,
-                pokemon_type_color_pipe_1.PokemonTypeColorPipe,
+            declarations: [
                 list_pokemon_component_1.ListPokemonComponent,
-                detail_pokemon_component_1.DetailPokemonComponent],
-            bootstrap: [app_component_1.AppComponent]
+                detail_pokemon_component_1.DetailPokemonComponent,
+                border_card_directive_1.BorderCardDirective,
+                pokemon_type_color_pipe_1.PokemonTypeColorPipe
+            ],
+            providers: []
         })
-    ], AppModule);
-    return AppModule;
+    ], PokemonsModule);
+    return PokemonsModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.PokemonsModule = PokemonsModule;
+//# sourceMappingURL=pokemons.module.js.map
